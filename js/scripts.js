@@ -20,17 +20,33 @@ var reverseString = function(newString) {
   return revStr;
 }
 
+var concatLetter = function(userSentence) {
+  var sentenceLength, getIndx, letterIndx, newSentence;
+
+  sentenceLength = userSentence.length;
+  getIndx = sentenceLength / 2;
+
+  letterIndx = userSentence.charAt(getIndx);
+
+  newSentence = letterIndx + userSentence;
+  alert(newSentence);
+  return newSentence;
+}
+
 var callFunctions = function(userSentence) {
-  var letters, revStr;
+  var letters, revStr, finalsStr;
 
   letters = firstLastLetterCaps(userSentence);
   revStr = reverseString(letters);
 
-  alert(revStr);
-  return revStr;
+  finalsStr = userSentence + revStr;
+  alert(finalsStr);
+  return finalsStr;
   
 }
 
 var userSentence = prompt("Enter a sentence:");
 callFunctions(userSentence);
+
+
 
