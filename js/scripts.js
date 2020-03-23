@@ -20,11 +20,17 @@ var reverseString = function(newString) {
   return revStr;
 }
 
+var callFunctions = function(userSentence) {
+  var letters, revStr;
+
+  letters = firstLastLetterCaps(userSentence);
+  revStr = reverseString(letters);
+
+  alert(revStr);
+  return revStr;
+  
+}
+
 var userSentence = prompt("Enter a sentence:");
-console.log(userSentence);
+callFunctions(userSentence);
 
-var b = firstLastLetterCaps(userSentence);
-alert(b);
-
-var c = reverseString(b);
-alert(c);
